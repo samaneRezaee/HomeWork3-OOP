@@ -33,7 +33,6 @@ namespace HomeWork3.task1
         }
         public bool ReturnBook(string title)
         {
-         
             foreach (Book book in _books)
             {
                 if (book.Title == title)
@@ -43,10 +42,11 @@ namespace HomeWork3.task1
                     return true;
                 }
             }
-            Console.WriteLine($"Book {title} not found!");
+
+            Console.WriteLine($"Book {title} is not found!");
             return false;
         }
-        public void printList() 
+        public void printList()
         {
             foreach (Book book in _books)
                 Console.WriteLine(book);
