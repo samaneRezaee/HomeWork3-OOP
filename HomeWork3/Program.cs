@@ -51,7 +51,7 @@ namespace HomeWork3
 
             while (true)
             {
-                Console.WriteLine("enter book name to return: : (To end the borrow section enter 'exit')");
+                Console.WriteLine("enter book name to return: : (To end the return section enter 'exit')");
                 string returnTitle = Console.ReadLine();
                 if (returnTitle != null)
                 {
