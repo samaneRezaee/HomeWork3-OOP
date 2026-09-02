@@ -25,7 +25,8 @@ namespace HomeWork3.task1
 
         public override string ToString()
         {
-            return "book: "+_title + " " + _author + " " + _isbn + " " + _isAvailable + "\n";
+            string status = IsAvailable ? "Available" : "Borrowed";
+            return $"book: {Title}, Author: {_author }, ISBN: {Isbn} -{status}\n ";
         }
     }
 }

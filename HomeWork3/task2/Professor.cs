@@ -16,7 +16,7 @@ namespace HomeWork3.task2
 
         public override string GetDetails()
         {
-            return $"Professor ID: {ProfessorId}, " + base.GetDetails() + $", Subject: {Subject}";
+            return $" Professor ID: {ProfessorId}, " + base.GetDetails() + $", Subject: {Subject}\n";
         }
     }
 }
