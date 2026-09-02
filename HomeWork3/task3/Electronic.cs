@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace HomeWork3.task3
 {
@@ -17,7 +13,7 @@ namespace HomeWork3.task3
         
         public override string GetProductDetails()
         {
-            return base.GetProductDetails() + $"WarrantyPeriod: {WarrantyPeriod}";
+            return base.GetProductDetails() + $", WarrantyPeriod: {WarrantyPeriod}";
         }
 
     }
