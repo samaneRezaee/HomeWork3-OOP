@@ -49,12 +49,31 @@ namespace HomeWork3
                 }
             }
 
+            while (true)
+            {
+                Console.WriteLine("enter book name to return: : (To end the borrow section enter 'exit')");
+                string returnTitle = Console.ReadLine();
+                if (returnTitle != null)
+                {
+                    returnTitle = returnTitle.Trim();
+                }
+                if (string.IsNullOrEmpty(returnTitle))
+                {
+                    Console.WriteLine("Title can not be null, please try again!");
+                    continue;
+                }
+                if (returnTitle == "exit")
+                {
+                    break;
+                }
+                if (library1.ReturnBook(returnTitle))
+                {
+                    Console.WriteLine(" Return was successful.\\n Current Library: \");");
+                    library1.printList();
+                    break;
+                }
 
-            Console.WriteLine("enter book name to return: ");
-            string returnTitle = Console.ReadLine();
-            library1.ReturnBook(returnTitle);
-            library1.printList();
-
+            }
             //task 2
             Console.WriteLine(" part task 2:");
 
