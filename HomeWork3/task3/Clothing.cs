@@ -13,7 +13,7 @@ namespace HomeWork3.task3
         }
         public override string GetProductDetails()
         {
-            return base.GetProductDetails() + $", Size: {Size}, Material: {Material} ";
+            return base.GetProductDetails() + $" Size: {Size}, Material: {Material} ";
         }
     }
 }
