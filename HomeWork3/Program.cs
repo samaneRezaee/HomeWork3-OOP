@@ -68,14 +68,14 @@ namespace HomeWork3
                 }
                 if (library1.ReturnBook(returnTitle))
                 {
-                    Console.WriteLine(" Return was successful.\\n Current Library: \");");
+                    Console.WriteLine(" Return was successful.\n Current Library: ");
                     library1.printList();
                     break;
                 }
 
             }
             //task 2
-            Console.WriteLine(" part task 2:");
+            Console.WriteLine(" part task 2:\n");
 
             List<Person> p = new List<Person>();
             {
