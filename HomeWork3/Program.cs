@@ -20,12 +20,35 @@ namespace HomeWork3
             library1.AddBook(book3);
             library1.AddBook(book4);
 
+            Console.WriteLine("Current Library:");
             library1.printList();
 
-            Console.WriteLine("enter book name to borrow: ");
-            string title = Console.ReadLine();
-            library1.BorrowBook(title);
-            library1.printList();
+            //book borrowing
+            while (true)
+            {
+                Console.WriteLine("enter book name to borrow: (To end the borrow section enter 'exit')");
+                string title = Console.ReadLine();
+                if (title != null) 
+                { 
+                    title = title.Trim();
+                }
+                if (string.IsNullOrEmpty(title)) 
+                {
+                    Console.WriteLine("Title can not be null, please try again!");
+                    continue;
+                }
+                if (title == "exit")
+                {
+                    break;
+                }
+                if (library1.BorrowBook(title))
+                {
+                    Console.WriteLine(" Borrow was successful.\n Current Library: ");
+                    library1.printList();
+                    break;
+                }
+            }
+
 
             Console.WriteLine("enter book name to return: ");
             string returnTitle = Console.ReadLine();
