@@ -2,8 +2,8 @@
 
 namespace HomeWork3.task3
 {
-    public interface Idiscountable
+    public interface IDiscountable
     {
-        void ApplyDiscount() { }
+        void ApplyDiscount(decimal persentage) { }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using HomeWork3.task1;
 using HomeWork3.task2;
+using HomeWork3.task3;
 
 namespace HomeWork3
 {
@@ -8,7 +9,7 @@ namespace HomeWork3
         static void Main(string[] args)
         {
 
-            //task1
+            //task1----------------------------------------------
             Book book1 = new Book("a", "b", "123");
             Book book2 = new Book("c", "d", "456");
             Book book3 = new Book("e", "f", "789");
@@ -28,11 +29,11 @@ namespace HomeWork3
             {
                 Console.WriteLine("enter book name to borrow: (To end the borrow section enter 'exit')");
                 string title = Console.ReadLine();
-                if (title != null) 
-                { 
+                if (title != null)
+                {
                     title = title.Trim();
                 }
-                if (string.IsNullOrEmpty(title)) 
+                if (string.IsNullOrEmpty(title))
                 {
                     Console.WriteLine("Title can not be null, please try again!");
                     continue;
@@ -48,7 +49,7 @@ namespace HomeWork3
                     break;
                 }
             }
-
+            //book return
             while (true)
             {
                 Console.WriteLine("enter book name to return: : (To end the return section enter 'exit')");
@@ -74,7 +75,7 @@ namespace HomeWork3
                 }
 
             }
-            //task 2
+            //task 2------------------------------------------
             Console.WriteLine(" part task 2:\n");
 
             List<Person> p = new List<Person>();
@@ -88,6 +89,28 @@ namespace HomeWork3
             {
 
                 Console.WriteLine(person.GetDetails());
+            }
+
+
+            //task3-------------------------------------------
+            Console.WriteLine();
+            Console.WriteLine("part task3\n");
+            List<Product> products = new List<Product>();
+            {
+                products.Add(new Electronic("smart Phone", 1000m, 24));
+                products.Add(new Clothing("pants", 200m, "L", "jean"));
+
+            }
+            foreach (Product product in products) 
+            {
+                if (product is IDiscountable discountable)
+                {
+                    discountable.ApplyDiscount(25);
+                }
+            }
+            foreach (Product product in products) 
+            {
+                Console.WriteLine(product.GetProductDetails());
             }
 
 

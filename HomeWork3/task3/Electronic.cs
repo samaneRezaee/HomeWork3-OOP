@@ -4,11 +4,13 @@ namespace HomeWork3.task3
 {
     public class Electronic : Product
     {
-        public DateTime WarrantyPeriod { get; set; }
+        public int WarrantyPeriod { get; set; }
 
-        public Electronic(string name, decimal price, DateTime warrantyPeriod):base(name, price)
+        public Electronic() { }
+
+        public Electronic(string name, decimal price, int warrantyPeriod):base(name, price)
         {
-            warrantyPeriod = WarrantyPeriod;
+            WarrantyPeriod = warrantyPeriod;
         }
         
         public override string GetProductDetails()
