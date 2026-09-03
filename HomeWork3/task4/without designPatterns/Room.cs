@@ -22,5 +22,14 @@ namespace HomeWork3.task4.without_designPatterns
             }
             Patients.Add(patient);
         }
+
+        public void RemovePatient(Patient patient) 
+        {
+            Patients.Remove(patient);
+        }
+        public override string ToString()
+        {
+            return $"Room {RoomNumber} ({Patients.Count}/{Capacity} is occupied.";
+        }
     }
 }
