@@ -18,5 +18,9 @@ namespace HomeWork3.task4.without_designPatterns
             patient.AddToMedicalHistory(disease);
             Console.WriteLine($"Dr.{Name} diagnosed {patient.Name} with: {disease}");
         }
+        public override string GetDetails()
+        {
+            return base.GetDetails() + $", DoctorId: {DoctorId}, Specialization: {Specialization}";
+        }
     }
 }
