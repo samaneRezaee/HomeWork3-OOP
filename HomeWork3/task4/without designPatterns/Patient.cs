@@ -20,11 +20,11 @@ namespace HomeWork3.task4.without_designPatterns
         public override string GetDetails()
         {
             string history;
-            if (MedicalHistory.Count > 0)
+            if (MedicalHistory.Count == 0)
                 history = "None";
             else
                 history = string.Join(", ", MedicalHistory);
-            return base.GetDetails() + $", PatientId: {PatientId}, History: [{history}]";
+            return base.GetDetails() + $", PatientId: {PatientId}, History: [{history}]\n";
         }
     }
 }

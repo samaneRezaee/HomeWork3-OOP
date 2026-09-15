@@ -20,7 +20,7 @@ namespace HomeWork3.task4.without_designPatterns
         }
         public override string GetDetails()
         {
-            return base.GetDetails() + $", DoctorId: {DoctorId}, Specialization: {Specialization}";
+            return base.GetDetails() + $", DoctorId: {DoctorId}, Specialization: {Specialization}\n";
         }
     }
 }

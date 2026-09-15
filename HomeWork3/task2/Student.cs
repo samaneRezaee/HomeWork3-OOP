@@ -15,7 +15,7 @@ namespace HomeWork3.task2
         }
         public override string GetDetails()
         {
-            return $" Student ID: {StudentId}, "+base.GetDetails()+ $" ,Magor: {Major}\n";
+            return $" Student ID: {StudentId}, "+base.GetDetails()+ $" ,Major: {Major}\n";
         }
     }
 }
